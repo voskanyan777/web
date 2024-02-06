@@ -63,17 +63,13 @@ a{
     text-decoration: none;
     transition: font-size 0.4s ease
 }
-a:hover{
-    color:black ;
-    font-size: 35px;
-}
 a.enter-link{
     color:black;
     text-decoration: none;
     font-size: 45px;
 }
 a.enter-link:hover{
-    color: blue;
+    color: yellow;
 }
 
 #myText {
@@ -113,7 +109,7 @@ img{
     height: 598px; /* Высота вашей карты */
   }
 .styled-box {
-    border: 2px solid #3498db; /* Цвет границы */
+    border: 2px solid #17405c; /* Цвет границы */
     padding: 20px; /* Внутренние отступы */
     border-radius: 15px; /* Закругленные углы */
     background-color: #ecf0f1; /* Цвет фона */
@@ -131,5 +127,5 @@ button{
 }
 p{
     color: black;
-    font-size: 25px;
+    font-size: 9px;
 }
