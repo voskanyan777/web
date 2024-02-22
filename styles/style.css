@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Protest Riot';
+    src: url('fonts/PatuaOne-Regular.ttf') format('woff2')
+}
 body {
     /* background-color: #9370db; /* MediumPurple или другой оттенок фиолетового */
     color: #ffffff; /* Белый цвет текста для контраста */
@@ -5,12 +9,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background: linear-gradient(to right, #ed0606, #1c26db);
+    background-color: rgba(84, 210, 171);
     background-size: 200% 100%;
-    animation: gradientAnimation 5s ease infinite;
+    /*background: linear-gradient(to right, #ed0606, #1c26db);*/
+    /* animation: gradientAnimation 5s ease infinite; */
 }
 
-@keyframes gradientAnimation {
+/* @keyframes gradientAnimation {
     0% {
         background-position: 0 0;
     }
@@ -20,10 +25,10 @@ body {
     100% {
         background-position: 0 0;
     }
-}
+} */
 .main-text{
     font-weight: bolder;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Protest Riot', sans-serif;
     color: black;
     font-size: 45px;
     text-align: center;
@@ -35,7 +40,7 @@ body {
 
 .enter {
     font-weight: bolder;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Protest Riot', sans-serif;
     color: black;
     font-size: 45px;
     text-align: center;
@@ -49,7 +54,7 @@ body {
   
 .description{
     font-size: 30px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Protest Riot', sans-serif;
     color: black;
     text-align: left;
 }
@@ -63,13 +68,17 @@ a{
     text-decoration: none;
     transition: font-size 0.4s ease
 }
+a:hover{
+    color:black ;
+    font-size: 35px;
+}
 a.enter-link{
     color:black;
     text-decoration: none;
     font-size: 45px;
 }
 a.enter-link:hover{
-    color: yellow;
+    color: blue;
 }
 
 #myText {
@@ -109,12 +118,12 @@ img{
     height: 598px; /* Высота вашей карты */
   }
 .styled-box {
-    border: 2px solid #17405c; /* Цвет границы */
+    border: 2px solid #3498db; /* Цвет границы */
     padding: 20px; /* Внутренние отступы */
     border-radius: 15px; /* Закругленные углы */
     background-color: #ecf0f1; /* Цвет фона */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
-    font-family: 'Raleway', sans-serif; /* Шрифт текста */
+    font-family: 'Protest Riot', sans-serif; /* Шрифт текста */
     color: #2c3e50; /* Цвет текста */
     line-height: 1.6; /* Междустрочный интервал */
 }
@@ -126,6 +135,7 @@ button{
     display: block;
 }
 p{
+    font-family: 'Protest Riot', sans-serif;
     color: black;
-    font-size: 9px;
+    font-size: 25px;
 }

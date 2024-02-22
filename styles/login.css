@@ -1,9 +1,14 @@
-body{
-    background: linear-gradient(to right, #ed0606, #1c26db);
-    background-size: 200% 100%;
-    animation: gradientAnimation 5s ease infinite;
+@font-face {
+    font-family: 'Protest Riot';
+    src: url('fonts/PatuaOne-Regular.ttf') format('woff2')
 }
-@keyframes gradientAnimation {
+body{
+    background-color: rgba(84, 210, 171);
+    /* background: linear-gradient(to right, #ed0606, #1c26db);
+    background-size: 200% 100%;
+    animation: gradientAnimation 5s ease infinite; */
+}
+/* @keyframes gradientAnimation {
     0% {
         background-position: 0 0;
     }
@@ -13,7 +18,7 @@ body{
     100% {
         background-position: 0 0;
     }
-}
+} */
 
 .styled-box {
     max-width: 200px;
@@ -22,21 +27,21 @@ body{
     border-radius: 15px; /* Закругленные углы */
     background-color: #ecf0f1; /* Цвет фона */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
-    font-family: 'Arial', sans-serif; /* Шрифт текста */
+    font-family: 'Protest Riot', sans-serif; /* Шрифт текста */
     color: #2c3e50; /* Цвет текста */
     line-height: 1.6; /* Междустрочный интервал */
   }
 
 .main-text {
     text-align: center; /* Выравнивание текста по центру */
-    margin-top: 90px;
+    margin-top: 150px;
 }
 
 
 .login{
     display: block; /* Установка блочного отображения для заголовка и поля ввода */
     margin: 2% auto; /* Центрирование элементов и добавление небольшого расстояния между ними */
-    font-family: 'Arial', sans-serif;
+    font-family: 'Protest Riot', sans-serif;
     border-radius: 5px;
     width: 260px;
     height: 30px;
@@ -53,6 +58,7 @@ button{
     font-size: 15px; 
 }
 a{
+    font-family: 'Protest Riot', sans-serif;
     color: black;
     text-decoration: none;
 }
