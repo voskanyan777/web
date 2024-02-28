@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Protest Riot';
-    src: url('fonts/PatuaOne-Regular.ttf') format('woff2')
+    src: url('/fonts/PatuaOne-Regular.ttf') format('woff2')
 }
 
 .main-tab{
@@ -45,6 +45,7 @@
     display: flex;
     justify-content: center; /* Центрируем по горизонтали */
     align-items: center; /* Центрируем по вертикали */
+   
 }
 
 .up img {
@@ -55,4 +56,12 @@
 html{
     scroll-behavior: smooth;
 }
-
+img {
+    margin-top: 130px;
+    display: flex;
+    width: 300px;
+    height: 350px;
+}
+.search{
+    margin-top: 65px;
+}

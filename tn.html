@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    #text-container {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 50px;
+}
+
+#text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid; /* Визуальный эффект "печатающейся" строки */
+    animation: typing 1.5s steps(10, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
+
+</style>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    animateText();
+});
+
+function animateText() {
+    const textElement = document.getElementById('text');
+    const originalText = textElement.textContent;
+    const textLength = originalText.length;
+
+    setInterval(function() {
+        for (let i = textLength; i >= 0; i--) {
+            const newText = originalText.substring(0, i);
+            textElement.textContent = newText;
+        }
+    }, 2000);
+}
+
+    </script>
+
+    <div id="text-container">
+        <span id="text">text</span>
+    </div>
+</body>
+</html>
