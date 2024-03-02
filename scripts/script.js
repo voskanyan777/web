@@ -26,9 +26,12 @@ myFn_4([12, 12, 13, 141, 12, 13, 92], 13)
 function myFn_6(number_array){
     let result = 1;
     number_array.forEach(element =>{
-        result *= element;
+        if (!isNaN(element)){
+            result *= element;    
+        }
+        
     })
     console.log(result)
 }
 
-myFn_6([1, 2, 3, 4, 5   ])
+myFn_6([1, 2,'a', 3, 4, 5])

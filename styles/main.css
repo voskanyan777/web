@@ -30,7 +30,7 @@
 .main-tab a{
     text-decoration: none;
 }
-.up {
+.up{
     position: fixed;
     bottom: 0;
     right: 0;
@@ -45,7 +45,7 @@
     display: flex;
     justify-content: center; /* Центрируем по горизонтали */
     align-items: center; /* Центрируем по вертикали */
-   
+   z-index: -5;
 }
 
 .up img {
