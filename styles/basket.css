@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Protest Riot';
+    src: url('/fonts/PatuaOne-Regular.ttf') format('woff2')
+}
+*{
+    font-family: 'Protest Riot', sans-serif;
+}
+.main-lk-tab {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    border: 1px solid;
+    border-color: rgb(84, 210, 171); 
+    background-color: rgb(84, 210, 171);
+    display: flex;
+    align-items: center; /* Центрирование по вертикали */
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: black;
+    font-size: 32px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.basket-text{
+    position: relative;
+    left: 50%; /* Смещаем блок влево на 50% ширины родителя */
+    transform: translateX(-50%); /* Возвращаем блок на 50% своей ширины влево */
+    width: 300px;
+}
+#main{
+    text-align: center;
+    font-size: 25px;
+    border: 2px solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 20px; 
+}
+
+.items {
+    height: 300px;
+    width: 900px;
+    overflow-y: auto; /* Добавьте прокрутку по вертикали при необходимости */
+    border: 1px solid #ccc; /* Добавьте границу для стилизации */
+    padding: 10px; /*Добавьте отступ для улучшения внешнего вида*/
+}
+#goods-text{
+    margin-left: 10px;
+    font-size: 30px;
+}
