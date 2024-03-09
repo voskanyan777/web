@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voskanyan-Shop</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <script src="/scripts/script.js"></script>
@@ -14,37 +13,43 @@
     <div class="main-tab">
         <a href="index.html#adress" target="_blank"><h3>Contacts</h3></a>
         <a href="#s"><h3>Catalog</h3></a>
-        <a href="#a"><h3>Basket</h3></a>
-    </div>
-    <div class="input-group input-group-sm mb-3 search">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
-        </div>
-        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-    </div>    
-    <div class="goods">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 mx-auto">
-                    <img src="/images/jeans.jpg" alt="jeans" class="img-fluid ">
-                    <div class="col-lg-8 offset-lg-2 text-center ">
-
-                        <h1 class="fs-4">Джинсы FASHION JEANS. 7500₽</h1>
-                    </div>
-                </div>
-                <div class="col-md-6 mx-auto">
-                    <img src="/images/air_jordan.jpg" alt="air_jordan" class="img-fluid">
-                    <div class="col-lg-8 offset-lg-2 text-center ">
-                        <h1 class="fs-4">Футболка Nike Air Jordan. 3500₽</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <a href="basket.html"><h3>Basket</h3></a>
     </div>
     <a href="#">
         <div class="up">
             <img src="/images/109583.png" ">
         </div>
     </a>
+    <div class="goods">
+        <div class="goods-card" style="margin-left: 70px;">
+            <img src="images/jeans.jpg" alt="">
+            <p>Product: Fashion Jeans</p>
+            <p>Price: 5500 ₽</p>
+            <p>In stock: <span class="green-color">A lot of</span></p>
+            <button class="basket-button">Add to Basket</button>        
+        </div>
+        <div class="goods-card">
+            <img src="images/air_jordan.jpg">
+            <p>Product: Air Jordan</p>
+            <p>Price: 7700 ₽</p>
+            <p>In stock: <span class="green-color">A lot of</span></p>
+            <button class="basket-button">Add to Basket</button>      
+        </div>
+        <div class="goods-card">
+            <img src="images/green-dunk.jpg" style="width: 400px;">
+            <p>Product: Nike SB Dunk Low </p>
+            <p>Price: 5200 ₽</p>
+            <p>In stock: <span class="green-color">A lot of</span></p>
+            <button class="basket-button">Add to Basket</button>  
+        </div>
+        <div class="goods-card">
+            <img src="images/shirt.png"">
+            <p>Product: Oversized shirt </p>
+            <p>Price: 2200 ₽</p>
+            <p>In stock: <span class="green-color">A lot of</span></p>
+            <button class="basket-button">Add to Basket</button>
+        </div>
+        
+    </div>
 </body>
 </html>

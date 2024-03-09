@@ -83,5 +83,8 @@ a{
 .user-description img{
     width: 300px;
     height: 300px;
-
+}
+.shop-history{
+    position: absolute;
+    right: 0;
 }

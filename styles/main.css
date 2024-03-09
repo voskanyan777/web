@@ -2,9 +2,18 @@
     font-family: 'Protest Riot';
     src: url('/fonts/PatuaOne-Regular.ttf') format('woff2')
 }
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+}
+*{
+    font-family: 'Protest Riot', sans-serif;
+}
 
 .main-tab{
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -34,18 +43,16 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    border: 4px solid;
-    border-radius: 50px;
+    border: 2px solid;
+    margin-bottom: 5px;
+    margin-right: 5px;
     color: rgb(0, 0, 0);
     text-align: center;
     width: 50px;
     height: 50px;
-    background-color: rgba(84, 210, 171);
-
     display: flex;
     justify-content: center; /* Центрируем по горизонтали */
     align-items: center; /* Центрируем по вертикали */
-   z-index: -5;
 }
 
 .up img {
@@ -53,15 +60,34 @@
     width: 30px;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-img {
-    margin-top: 130px;
+.goods{
+    position: absolute;
+    text-align: left;
+    font-size: 20px;
     display: flex;
-    width: 300px;
-    height: 350px;
 }
-.search{
-    margin-top: 65px;
+.goods-card{
+    border: 2px solid;
+    margin-top: 30px;
+    padding: 2px auto;
+    margin-left: 30px;
+}
+p{
+    margin: 5px;
+}
+img{
+    width: 300px;
+    height: 300px;
+}
+.green-color{
+    color: rgb(84, 210, 171);
+}
+.basket-button{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
 }
