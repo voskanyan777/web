@@ -26,6 +26,24 @@ body{
     justify-content: space-around; /* Равномерное распределение пространства между элементами */
     align-items: center; /* Выравнивание по центру по вертикали */
 }
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    margin-top: 5px;
+}
+
+.search input{
+    width: 400px;
+    height: 30px;
+}
+.search button{
+    height: 35px;
+}
+
+
+
 .main-tab h3{
 
     color: black;
