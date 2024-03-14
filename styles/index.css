@@ -41,11 +41,14 @@
 
 .about-images {
   display: flex;
+  justify-content: center; /* Выравнивание по центру по горизонтали */
+  align-items: center; /* Выравнивание по центру по вертикали */
 }
 
 .about-images img {
   margin-right: 30px;
   width: 725px;
+  height: 500px;
   border: 5px solid;
   border-color: rgb(84, 210, 171);
 }

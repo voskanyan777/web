@@ -14,3 +14,4 @@ function searchProducts() {
 }
 
 document.getElementById('searchInput').addEventListener('input', searchProducts);
+
