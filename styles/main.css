@@ -7,6 +7,7 @@ html{
 }
 body{
     margin: 0;
+
 }
 *{
     font-family: 'Protest Riot', sans-serif;
@@ -57,6 +58,18 @@ body{
 .main-tab a{
     text-decoration: none;
 }
+
+footer {
+    position: relative;
+    background-color: rgb(84, 210, 171);
+    padding: 20px;
+    margin-top: 10px;
+    height: 250px;
+}
+
+.contact-info{
+    font-size: 25px;
+}
 .up{
     position: fixed;
     bottom: 0;
@@ -71,6 +84,7 @@ body{
     display: flex;
     justify-content: center; /* Центрируем по горизонтали */
     align-items: center; /* Центрируем по вертикали */
+    z-index: 100;
 }
 
 .up img {
@@ -79,12 +93,13 @@ body{
 }
 
 .goods{
-    position: absolute;
+    position: relative;
     text-align: left;
     font-size: 20px;
     display: flex;
     flex-wrap: wrap; /* Разрешить перенос элементов на новую строку */
     justify-content: center;
+    flex-grow: 1; /* Растягиваем блок товаров на всё доступное пространство */
 }
 
 .goods-card{
@@ -97,12 +112,13 @@ body{
     border-color: rgb(206, 193, 13);
 }
 
-p{
+p, h3{
     margin: 5px;
 }
-img{
+.goods-card img{
     width: 300px;
     height: 300px;
+    border: 2px solid;
 }
 .green-color{
     color: rgb(84, 210, 171);
@@ -114,5 +130,23 @@ img{
     margin-bottom: 10px;
     margin-left: 50%;
     transform: translateX(-50%);
+}
+.telephone-number, .email, .github{
+    display: flex; 
+    justify-content: flex-start; /* Выравниваем содержимое в начале контейнера */
+}
+.telephone-number, .email, .github img {
+    margin-right: 10px; /* Отступ между изображением и текстом */
+}
 
+.github{
+    margin-top: 10px;
+}
+#github-svg{
+    width: 35px;
+
+}
+a{
+    text-decoration: none;
+    color:black
 }
