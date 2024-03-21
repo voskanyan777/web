@@ -33,7 +33,7 @@ function CarModer(model_name, model_color, model_price, car_release_date){
         return 'This car is cheap'
     }
 }
-
+?
 const bmw = new CarModer('BMW M5 F90', 'Black', '99000', 2022)
 console.log(bmw.CarInfo())
 console.log(bmw.CarValution())
