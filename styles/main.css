@@ -59,12 +59,13 @@ body{
     text-decoration: none;
 }
 
-footer {
+#main-footer {
     position: relative;
     background-color: rgb(84, 210, 171);
     padding: 20px;
     margin-top: 10px;
     height: 250px;
+    transition: background-color 0.3s ease;
 }
 
 .contact-info{

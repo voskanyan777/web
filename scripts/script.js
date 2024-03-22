@@ -15,17 +15,21 @@ function searchProducts() {
 
 document.getElementById('searchInput').addEventListener('input', searchProducts);
 
-const themeButton = document.getElementById('theme-btn')
+const themeButton = document.getElementById('theme-btn');
+const mainFooter = document.getElementById('main-footer');
+
 
 themeButton.addEventListener('click', function(){
     if(themeButton.textContent === 'light'){
         themeButton.textContent = 'dark';
         themeButton.style.backgroundColor = '#0f3675';
         document.body.style.backgroundColor = '#33373d';
+        mainFooter.style.backgroundColor = '#14366e';
     }
     else{
         themeButton.textContent = 'light';
         themeButton.style.backgroundColor = 'rgb(84, 210, 171)';
         document.body.style.backgroundColor = 'white';
+        mainFooter.style.backgroundColor = "rgb(84, 210, 171)";
     }
 })
