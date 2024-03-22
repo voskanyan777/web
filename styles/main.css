@@ -7,7 +7,7 @@ html{
 }
 body{
     margin: 0;
-
+    transition: background-color 0.3s ease;
 }
 *{
     font-family: 'Protest Riot', sans-serif;
@@ -74,6 +74,16 @@ footer {
     position: fixed;
     bottom: 0;
     right: 0;
+    z-index: 100;
+}
+#theme-btn{
+    width: 53px;
+    height: 53px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    background-color: rgb(84, 210, 171);
+    /* Добавляем transition для плавного изменения цвета фона */
+    transition: background-color 0.3s ease;
 }
 .up-btn{
 
@@ -87,7 +97,6 @@ footer {
     display: flex;
     justify-content: center; /* Центрируем по горизонтали */
     align-items: center; /* Центрируем по вертикали */
-    z-index: 100;
 }
 
 .up-btn img {
@@ -106,6 +115,7 @@ footer {
 }
 
 .goods-card{
+    background-color: white;
     border: 2px solid;
     margin-top: 30px;
     padding: 2px auto;
