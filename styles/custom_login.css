@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Protest Riot";
+    src: url("/fonts/PatuaOne-Regular.ttf") format("woff2");
+}
+
+* {
+    font-family: "Protest Riot", sans-serif;
+    margin: auto;
+}
+#welcome-text{
+    text-align: center;
+    background-color: rgba(84, 210, 171);
+    font-size: 15px;
+}
+
+.container-div input{
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    border: 2px solid;
+}
+
+
+input:hover{
+    border-color: blue;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Для центрирования по вертикали */
+}
+
+.tests{
+    display: flex;
+    align-items: center;
+}
+.tests h3{
+    font-size: 15px;
+}
