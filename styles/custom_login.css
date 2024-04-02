@@ -39,3 +39,6 @@ input:hover{
 .tests h3{
     font-size: 15px;
 }
+.mainBtn{
+    width: 100%;
+}
