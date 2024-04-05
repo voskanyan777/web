@@ -1,3 +1,13 @@
+jQuery.fx.speeds.turtle = 700;
+$('#welcome-text').css({'width': '0px', 'fontSize': '2px'})
+$('#welcome-text').fadeOut('turtle')
+$('#welcome-text').slideDown('turtle')
+$('#welcome-text').animate({
+    width: '100%',
+    'fontSize': '15px'
+
+}, 1200)
+
 const toggleInput = document.getElementById('toggleInput')
 
 

@@ -1,3 +1,12 @@
+jQuery.fx.speeds.turtle = 700;
+
+$(".main-tab").fadeOut('turtle')
+
+$('.main-tab').slideDown('turtle')
+
+
+
+
 function searchProducts() {
     // Получаем значение из поля ввода
     const userSearch = document.getElementById('searchInput').value.toLowerCase();
@@ -58,8 +67,10 @@ window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
         document.getElementById("toolsBar").style.bottom = `0px`; // показать панель инструментов при прокрутке вверх
-    } else {
+    } 
+    else {
         document.getElementById("toolsBar").style.bottom = "-150px"; // скрыть панель инструментов при прокрутке вниз
+    
     }
     prevScrollpos = currentScrollPos;
 }
