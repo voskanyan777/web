@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Protest Riot';
-    src: url('/fonts/PatuaOne-Regular.ttf') format('woff2')
+    src: url('/frontend/fonts/PatuaOne-Regular.ttf') format('woff2')
 }
 *{
     font-family: 'Protest Riot', sans-serif;
@@ -85,5 +85,6 @@ a{
     height: 300px;
 }
 .shop-history{
-    
+    position: relative;
+    margin-left: 700px;
 }
