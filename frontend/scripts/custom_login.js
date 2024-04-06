@@ -74,3 +74,4 @@ function setCookie(userLogin, userEmail){
     document.cookie = 'version=' + encodeURIComponent(userLogin + '/' + userEmail) + '; maxage=35'
 }
 
+const new_div = $("<p>hello</p>")

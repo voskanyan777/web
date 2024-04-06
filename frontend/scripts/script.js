@@ -75,3 +75,4 @@ window.onscroll = function() {
     prevScrollpos = currentScrollPos;
 }
 
+const new_div = document.createElement('div')

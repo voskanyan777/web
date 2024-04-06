@@ -29,6 +29,7 @@ function getCookie(){
 
 const userInfo = getCookie()
 
+
 const userLogin = document.getElementById('user-login')
 const userEmail = document.getElementById('user-email')
 
