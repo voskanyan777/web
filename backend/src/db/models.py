@@ -1,7 +1,7 @@
 import asyncio
 from typing import Annotated
 from datetime import datetime
-from sqlalchemy import String
+from sqlalchemy import String, ForeignKey, CheckConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 from database import Base, async_session_marker
 
@@ -16,4 +16,26 @@ class Users(Base):
     password: Mapped[str] = mapped_column(nullable=False)
     user_email: Mapped[str] = mapped_column(String(50), nullable=False)
     registered_at: Mapped[datetime]
+
+
+class Goods(Base):
+    __tablename__ = 'goods'
+    id: Mapped[intpk]
+    goods_name: Mapped[str] = mapped_column(String(30), nullable=False)
+    goods_description: Mapped[str] = mapped_column(String(500), nullable=False)
+    goods_price: Mapped[float] = mapped_column(nullable=False)
+    goods_image_url: Mapped[str] = mapped_column(String(500), nullable=False)
+    goods_type: Mapped[str] = mapped_column(String(50), nullable=False)
+    count: Mapped[int] = mapped_column(nullable=False)
+    goods_status: Mapped[str] = mapped_column(String(50), nullable=False)
+
+
+class GoodsReviews(Base):
+    __tablename__ = 'goods_reviews'
+    __table_args__ = (CheckConstraint('review_star IN (0, 1, 2, 3, 4, 5)'),)
+    id = Mapped[intpk]
+    goods_id = Mapped[int] = mapped_column(ForeignKey('goods.id'))
+    user_name = Mapped[str] = mapped_column(String(30), nullable=False)
+    review: Mapped[str] = mapped_column(String(500))
+    review_star: Mapped[int] = mapped_column(nullable=False)
 
