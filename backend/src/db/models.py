@@ -3,7 +3,12 @@ from typing import Annotated
 from datetime import datetime
 from sqlalchemy import String, ForeignKey, CheckConstraint
 from sqlalchemy.orm import Mapped, mapped_column
-from database import Base, async_session_marker
+from sqlalchemy.orm import DeclarativeBase
+
+
+class Base(DeclarativeBase):
+    pass
+
 
 intpk = Annotated[int, mapped_column(primary_key=True)]
 user_name = Annotated[str, mapped_column(String(30), nullable=False)]
@@ -34,9 +39,9 @@ class Goods(Base):
 class GoodsReviews(Base):
     __tablename__ = 'goods_reviews'
     __table_args__ = (CheckConstraint('review_star IN (0, 1, 2, 3, 4, 5)'),)
-    id = Mapped[intpk]
-    goods_id = Mapped[int] = mapped_column(ForeignKey('goods.id'))
-    user_name = Mapped[user_name]
+    id: Mapped[intpk]
+    goods_id: Mapped[int] = mapped_column(ForeignKey('goods.id'))
+    user_name: Mapped[user_name]
     review: Mapped[str] = mapped_column(String(500))
     review_star: Mapped[int] = mapped_column(nullable=False)
 
