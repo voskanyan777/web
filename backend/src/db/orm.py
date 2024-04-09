@@ -1,9 +1,14 @@
-from .database import sync_engine
+from .database import async_engine, async_session_factory
 from .models import Base
 
 
-class SyncOrm:
+class AsyncOrm:
     @staticmethod
-    def create_tables():
-        Base.metadata.drop_all(sync_engine)
-        Base.metadata.create_all(sync_engine)
+    async def create_tables():
+        async with async_engine.begin() as conn:
+            await conn.run_sync(Base.metadata.create_all)
+
+    @staticmethod
+    async def drop_tables():
+        async with async_engine.begin() as conn:
+            await conn.run_sync(Base.metadata.drop_all)

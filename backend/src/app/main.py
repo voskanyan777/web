@@ -1,6 +1,7 @@
-from fastapi import FastAPI
 import uvicorn
-from backend.src.db.orm import SyncOrm
+from fastapi import FastAPI
+
+from backend.src.db.orm import AsyncOrm
 
 app = FastAPI(
     title='API for online store'
@@ -9,9 +10,10 @@ app = FastAPI(
 
 @app.on_event('startup')
 async def startup():
-    sync = SyncOrm()
-    sync.create_tables()
+    async_orm = AsyncOrm
+    await async_orm.drop_tables()
+    await async_orm.create_tables()
 
 
 if __name__ == '__main__':
-    uvicorn.run(app, port=8005)
+    uvicorn.run(app, port=8002)
