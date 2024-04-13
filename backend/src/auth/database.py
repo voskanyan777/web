@@ -1,16 +1,28 @@
-from fastapi_users.authentication import BearerTransport, JWTStrategy
+from typing import AsyncGenerator
+
+from fastapi import Depends
+from fastapi_users.db import SQLAlchemyBaseUserTableUUID, SQLAlchemyUserDatabase
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.ext.declarative import DeclarativeMeta, declarative_base
 
 from backend.src.db.database import async_session_factory
+from backend.src.db.database import async_engine
+
+Base: DeclarativeMeta = declarative_base()
 
 
-async def get_async_session():
+class User(SQLAlchemyBaseUserTableUUID, Base):
+    pass
+async def create_db_and_tables():
+    async with async_engine.begin() as conn:
+        await conn.run_sync(Base.metadata.drop_all)
+        await conn.run_sync(Base.metadata.create_all)
+
+
+async def get_async_session() -> AsyncGenerator[AsyncSession, None]:
     async with async_session_factory() as session:
         yield session
 
 
-bearer_transport = BearerTransport(tokenUrl='auth/login')
-
-SECRET = 'some'
-
-def get_jwt_strategy() -> JWTStrategy:
-    return JWTStrategy(secret=SECRET, lifetime_seconds=3600)
+async def get_user_db(session: AsyncSession = Depends(get_async_session)):
+    yield SQLAlchemyUserDatabase(session, User)

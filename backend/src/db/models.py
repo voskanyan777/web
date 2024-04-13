@@ -15,7 +15,7 @@ user_name = Annotated[str, mapped_column(String(30), nullable=False)]
 
 
 class Users(Base):
-    __tablename__ = 'users'
+    __tablename__ = 'user'
     id: Mapped[intpk]
     user_name: Mapped[user_name]
     user_login: Mapped[str] = mapped_column(String(35), nullable=False)
@@ -49,5 +49,5 @@ class GoodsReviews(Base):
 class GoodsBasket(Base):
     __tablename__ = 'goods_basket'
     id: Mapped[intpk]
-    user_id: Mapped[int] = mapped_column(ForeignKey('users.id'))
+    user_id: Mapped[int] = mapped_column(ForeignKey('user.id'))
     goods_id: Mapped[int] = mapped_column(ForeignKey('goods.id'))
