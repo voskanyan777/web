@@ -21,4 +21,13 @@ async def read_item(request: Request, product_name: str) -> dict:
     # return templates.TemplateResponse(
     #     request=request, name="description.html"
     # )
-    return templates.TemplateResponse("description.html", {"request": request})
+    description = ("Представьте себе удивительные кроссовки, "
+                   "которые словно олицетворяют ритм вашей жизни. "
+                   "Изготовленные из инновационных материалов, "
+                   "они объединяют в себе комфорт и стиль.")
+    return templates.TemplateResponse("description.html", {
+        "request": request,
+        "product_name": product_name,
+        "price": "1200$",
+        "description": description
+    })

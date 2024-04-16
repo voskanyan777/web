@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <title>Product Description</title>
 </head>
+<style>
+    @font-face {
+        font-family: 'Protest Riot';
+        src: url('/frontend/fonts/PatuaOne-Regular.ttf') format('woff2')
+    }
+    * {
+        font-family: "Protest Riot", sans-serif;
+    }
+    .main-tab {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background-color: rgb(84, 210, 171);
+      display: flex;
+      align-items: center;
+    }
+</style>
+
 <body>
-    <h1>Hello world</h1>
-    {% block content %}{% endblock %}
+
+    <div class="main-tab">
+        <h3 style="font-size: 40px">Voskanyan-Shop</h3>
+        <h2 style="font-size: 40px; margin-left: 25%">Product Description</h2>
+    </div>
+    {% block content %} {% endblock %}
 </body>
 </html>
