@@ -1,5 +1,12 @@
-from .database import async_engine
-from .models import Base
+import sys
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent.parent
+sys.path.append(str(BASE_DIR))
+
+
+from db.database import async_engine
+from db.models import Base
 
 
 class AsyncOrm:

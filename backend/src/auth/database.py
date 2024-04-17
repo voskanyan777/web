@@ -5,8 +5,15 @@ from fastapi_users.db import SQLAlchemyBaseUserTableUUID, SQLAlchemyUserDatabase
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.ext.declarative import DeclarativeMeta, declarative_base
 
-from backend.src.db.database import async_engine
-from backend.src.db.database import async_session_factory
+import sys
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent.parent
+sys.path.append(str(BASE_DIR))
+
+
+from db.database import async_engine
+from db.database import async_session_factory
 
 Base: DeclarativeMeta = declarative_base()
 

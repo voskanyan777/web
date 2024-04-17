@@ -9,9 +9,14 @@ from fastapi_users.authentication import (
     JWTStrategy,
 )
 from fastapi_users.db import SQLAlchemyUserDatabase
+import sys
+from pathlib import Path
 
-from backend.src.auth.database import User as Users
-from backend.src.auth.database import get_user_db
+BASE_DIR = Path(__file__).parent.parent
+sys.path.append(str(BASE_DIR))
+
+from auth.database import User as Users
+from auth.database import get_user_db
 
 SECRET = "SECRET"
 
