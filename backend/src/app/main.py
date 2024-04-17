@@ -1,12 +1,18 @@
 import uvicorn
 from fastapi import FastAPI, Depends
 
-from backend.src.auth.database import User
-from backend.src.auth.database import create_db_and_tables
-from backend.src.auth.schemas import UserRead, UserCreate
-from backend.src.auth.users import auth_backend, current_user, fastapi_users
-from backend.src.db.orm import AsyncOrm
-from backend.src.pages.router import router as render_router
+import sys
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent.parent
+sys.path.append(str(BASE_DIR))
+
+from auth.database import User
+from auth.database import create_db_and_tables
+from auth.schemas import UserRead, UserCreate
+from auth.users import auth_backend, current_user, fastapi_users
+from db.orm import AsyncOrm
+from pages.router import router as render_router
 
 app = FastAPI(
     title='API for online store'
@@ -34,5 +40,3 @@ async def startup():
     # await async_orm.create_tables()
 
 
-if __name__ == '__main__':
-    uvicorn.run(app, port=8002)
