@@ -11,7 +11,6 @@ router = APIRouter(
 )
 
 BASE_DIR = Path(__file__).parent
-print(BASE_DIR)
 
 templates = Jinja2Templates(directory=str(BASE_DIR))
 
