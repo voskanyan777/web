@@ -4,7 +4,6 @@ from fastapi import APIRouter
 from fastapi import Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-
 router = APIRouter(
     prefix='/html_rendering',
     tags=['html_rendering'],
@@ -13,6 +12,7 @@ router = APIRouter(
 BASE_DIR = Path(__file__).parent
 
 templates = Jinja2Templates(directory=str(BASE_DIR))
+
 
 
 @router.get("/product_description/{product_name}", response_class=HTMLResponse)
@@ -30,3 +30,4 @@ async def read_item(request: Request, product_name: str) -> dict:
         "price": "1200$",
         "description": description
     })
+

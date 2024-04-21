@@ -12,7 +12,7 @@ from auth.schemas import UserRead, UserCreate
 from auth.users import auth_backend, current_user, fastapi_users
 from db.orm import AsyncOrm
 from pages.router import router as render_router
-
+from products.router import router as products_router
 app = FastAPI(
     title='API for online store'
 )
@@ -25,6 +25,7 @@ app.include_router(
     tags=["auth"],
 )
 app.include_router(render_router)
+app.include_router(products_router)
 
 @app.get("/authenticated-route")
 async def authenticated_route(user: User = Depends(current_user)):
