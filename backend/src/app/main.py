@@ -35,8 +35,8 @@ async def authenticated_route(user: User = Depends(current_user)):
 @app.on_event('startup')
 async def startup():
     async_orm = AsyncOrm()
-    await create_db_and_tables()
-    await async_orm.drop_tables()
-    await async_orm.create_tables()
+    # await create_db_and_tables()
+    # await async_orm.drop_tables()
+    # await async_orm.create_tables()
 
 
