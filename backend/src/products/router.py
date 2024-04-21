@@ -17,10 +17,3 @@ async def add_product(product: GoodsSchema):
         'status': 'ok'
     }
 
-@router.get('/get_product')
-async def get_product(goods_name: str):
-    data = await async_orm.select_goods(goods_name)
-    return {
-        'data': data,
-        'status': 'ok'
-    }

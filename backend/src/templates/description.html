@@ -2,8 +2,12 @@
 
 {% block content %}
     <div>
-        <p>description of product: {{ product_name }}</p>
+        <p>Product: {{product_name}}</p>
+        <p>description of product: {{ product_description }}</p>
         <p>Price: {{ price }}</p>
-        <p>Description : {{ description }}</p>
+        <img src={{ goods_image_url }} alt="123">
+        <p>Type: {{ goods_type }}</p>
+        <p>Count: {{ count}} </p>
+        <p>Status: {{ goods_status }}</p>
     </div>
 {% endblock %}
